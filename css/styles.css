@@ -173,3 +173,15 @@
 .hero.is-info a:focus {
   margin: 4px 6px;
 }
+
+
+
+.visuallyhidden {
+  position: absolute;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
