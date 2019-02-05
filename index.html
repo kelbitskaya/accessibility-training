@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,9 +9,8 @@
   <link rel="stylesheet prefetch" href="css/styles.css">
 </head>
 
-<main>
   <div class="hero hero-bg is-fullheight">
-    <header class="hero-head">
+    <header class="hero-head" role="banner">
       <div class="navbar">
         <div class="container">
           <div class="navbar-brand">
@@ -25,47 +24,40 @@
             </span>
           </div>
 
+
           <nav id="navbarMenu" class="navbar-menu">
-            <ol class="navbar-end">
+            <h2 class="visuallyhidden">Main Menu</h2>
+            <ul class="navbar-end">
               <li class="navbar-item">
-                <a class="button is-white is-outlined" tabindex="0">
-                  <span class="icon">
-                    <i class="fa fa-home"></i>
-                  </span>
+                <a href="#" class="button is-white is-outlined">
+                  <span class="icon fa fa-home"></span>
                   <span>Home</span>
                 </a>
               </li>
               <li class="navbar-item">
-                <a class="button is-white is-outlined" tabindex="0">
-                  <span class="icon">
-                    <i class="fab fa-superpowers"></i>
-                  </span>
+                <a href="#" class="button is-white is-outlined">
+                  <span class="icon fab fa-superpowers"></span>
                   <span>Examples</span>
                 </a>
               </li>
               <li class="navbar-item">
-                <a class="button is-white is-outlined" tabindex="0">
-                  <span class="icon">
-                    <i class="fa fa-book"></i>
-                  </span>
+                <a href="#" class="button is-white is-outlined">
+                  <span class="icon fa fa-book"></span>
                   <span>Documentation</span>
                 </a>
               </li>
               <li class="navbar-item">
-                <a class="button is-white is-outlined" tabindex="0">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
+                <a href="#" class="button is-white is-outlined">
+                  <span class="icon fab fa-github"></span>
                   <span>View Source</span>
                 </a>
               </li>
-            </ol>
+            </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main>
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="column is-6 is-offset-3">
@@ -74,7 +66,7 @@
             $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
           </h2>
           <div class="box">
-            <div class="field is-grouped">
+            <form class="field is-grouped">
               <p class="control is-expanded">
                 <label for="notifyViaEmail" class="visuallyhidden">Email: </label>
                 <input class="input" name="notifyViaEmail" id="notifyViaEmail">
@@ -82,7 +74,7 @@
               <p class="control">
                 <button class="button is-info">Notify Me</button>
               </p>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -94,15 +86,15 @@
       </div>
     </div>
   </div>
-
+<main>
   <div class="section" id="about">
-    <section class="section-heading has-text-centered">
-      <h2 class="title is-2">About Us</h2>
+    <section class="section-heading has-text-centered" aria-labelledby="region1" role="region">
+      <h2 class="title is-2" id="region1">About Us</h2>
       <h5 class="subtitle is-5">We of all trades, master of "some"</h5>
       <div class="container">
-        <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
+        <p>Web developers with more than <strong>4 years</strong> of well-rounded experience with a degree in the
           field of
-          <b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Coffee</b>.
+          <strong>Computer Science</strong>, extensive knowledge of modern Web techniques and love for <strong>Coffee</strong>.
           Looking for an opportunity to work and upgrade, as well as being involved in an organization that
           believes
           in gaining a competitive edge and giving back to the community.</p>
@@ -138,8 +130,8 @@
             </div>
             <br>
             <div class="buttons has-addons is-centered">
-              <a class="is-link" tabindex="0">Github &#8658</a>
-              <a class="is-link" tabindex="0">LinkedIn &#8658 </a>
+              <a class="button external-link">Github</a>
+              <a class="button external-link">LinkedIn</a>
             </div>
           </div>
         </div>
@@ -157,70 +149,45 @@
 
       <div class="column">
         <div class="card">
-          <div class="card-content skills-content">
+          <section class="card-content skills-content">
             <h4 class="title is-4">Skills</h4>
-            <div class="content">
+            <ul class="content">
+              <li class="media">
+                <div class="media-content">
+                  <strong>JavaScript:</strong>
+                  <progress class="progress is-primary" value="90" max="100"></progress>
+                </div>
+              </li>
+
               <div class="media">
                 <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <b>JavaScript:</b>
-                      <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
-                    </p>
-                  </div>
+                  <strong>Vue.js:</strong>
+                  <progress class="progress is-primary" value="90" max="100"></progress>
                 </div>
               </div>
 
               <div class="media">
                 <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <b>Vue.js:</b>
-                      <br>
-                      <progress class="progress is-primary" value="90" max="100"></progress>
-                    </p>
-                  </div>
+                  <strong>Node.js:</strong>
+                  <progress class="progress is-primary" value="75" max="100"></progress>
                 </div>
               </div>
 
               <div class="media">
                 <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <b>Node.js:</b>
-                      <br>
-                      <progress class="progress is-primary" value="75" max="100"></progress>
-                    </p>
-                  </div>
+                  <strong>HTML5/CSS3</strong>
+                  <progress class="progress is-primary" value="95" max="100"></progress>
                 </div>
               </div>
 
               <div class="media">
                 <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <b>HTML5/CSS3</b>
-                      <br>
-                      <progress class="progress is-primary" value="95" max="100"></progress>
-                    </p>
-                  </div>
+                  <strong>Databases</strong>
+                  <progress class="progress is-primary" value="66" max="100"></progress>
                 </div>
               </div>
-
-              <div class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <b>Databases</b>
-                      <br>
-                      <progress class="progress is-primary" value="66" max="100"></progress>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </ul>
+          </section>
         </div>
       </div>
     </div>
@@ -268,13 +235,13 @@
         <div class="column is-4">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
-              <i class="fa fa-paw"></i>
+              <span class="fa fa-paw"></span>
             </div>
             <div class="card-content">
               <div class="content">
                 <div>Tristique senectus et netus et.</div>
                 <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                <p><a tabindex="0">Learn more</a></p>
+                <p><a>Learn more</a></p>
               </div>
             </div>
           </div>
@@ -283,14 +250,14 @@
         <div class="column is-4">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
-              <i class="fab fa-empire"></i>
+              <span class="fab fa-empire"></span>
             </div>
             <div class="card-content">
               <div class="content">
                 <div>Tempor orci dapibus ultrices in.</div>
                 <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
                   sed risus.</p>
-                <p><a tabindex="0">Learn more</a></p>
+                <p><a>Learn more</a></p>
               </div>
             </div>
           </div>
@@ -299,13 +266,13 @@
         <div class="column is-4">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
-              <i class="fab fa-apple"></i>
+              <span class="fab fa-apple"></span>
             </div>
             <div class="card-content">
               <div class="content">
                 <div> Leo integer malesuada nunc vel risus. </div>
                 <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                <p><a tabindex="0">Learn more</a></p>
+                <p><a>Learn more</a></p>
               </div>
             </div>
           </div>
@@ -325,25 +292,25 @@
       <ul>
         <li data-target="pane-1" id="1">
           <button class="button">
-            <span class="icon is-small"><i class="fa fa-image"></i></span>
+            <span class="icon is-small"><span class="fa fa-image"></span></span>
             <span>Pictures</span>
           </button>
         </li>
         <li data-target="pane-2" id="2" class="is-active">
           <button class="button">
-            <span class="icon is-small"><i class="fab fa-empire"></i></span>
+            <span class="icon is-small"><span class="fab fa-empire"></span></span>
             <span>Article</span>
           </button>
         </li>
         <li data-target="pane-3" id="3">
           <button class="button">
-            <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+            <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
             <span>Team</span>
           </button>
         </li>
         <li data-target="pane-4" id="4">
           <button class="button">
-            <span class="icon is-small"><i class="fa fa-film"></i></span>
+            <span class="icon is-small"><span class="fa fa-film"></span></span>
             <span>Video</span>
           </button>
         </li>
@@ -413,27 +380,27 @@
         <div class="column">
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-github-square fa-4x"></i>
+              <span class="fab fa-github-square fa-4x"></span>
             </div>
             <div class="media-content">
               <div class="content">
-                <p>
-                  <a><b>Dominic Ipsum  &#8658 </b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                </p>
+                <h6>
+                  <a class="external-link">Dominic Ipsum</a>
+                </h6>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
               </div>
             </div>
           </div>
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-empire fa-4x"></i>
+              <span class="fab fa-empire fa-4x"></span>
             </div>
             <div class="media-content">
               <div class="content">
-                <p>
-                  <a><b>Cassie Ipsum &#8658 </b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                </p>
+                <h6>
+                  <a class="external-link">Cassie Ipsum</a>
+                </h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
               </div>
             </div>
           </div>
@@ -441,27 +408,25 @@
         <div class="column">
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-ravelry fa-4x"></i>
+              <span class="fab fa-ravelry fa-4x"></span>
             </div>
             <div class="media-content">
               <div class="content">
-                <p>
-                  <a><b>Avery Ipsum &#8658 </b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                </p>
+                <h6>
+                  <a class="external-link">Avery Ipsum</a>
+                </h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
               </div>
             </div>
           </div>
           <div class="media">
             <div class="media-left">
-              <i class="fab fa-github-alt fa-4x"></i>
+              <span class="fab fa-github-alt fa-4x"></span>
             </div>
             <div class="media-content">
               <div class="content">
-                <p>
-                  <a><b>io Ipsum &#8658 </b></a>
-                  <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-                </p>
+                <h6><a class="external-link">io Ipsum </a></h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.</p>
               </div>
             </div>
           </div>
@@ -474,18 +439,18 @@
         <div class="column is-three-quarters">
           <h3 class="title has-text-centered">Inspired video</h3>
           <div class="embed-container image">
-            <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <iframe src="https://player.vimeo.com/video/261794608" webkitAllowFullScreen mozallowfullscreen allowFullScreen title="Inspired video"></iframe>
           </div>
         </div>
       </div>
     </div>
 
-    <h3 class="tab-pane is-active" id="pane-2">
+    <div class="tab-pane is-active" id="pane-2">
       <article class="content">
         <h1 class="is-1 title">Hello World</h1>
         <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <h2 class="is-2 title">Second level</h2>
-        <p>Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
+        <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
         <ul>
           <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
           <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
@@ -493,7 +458,7 @@
           <li>Ut non enim metus.</li>
         </ul>
         <h3 class="is-3 title">Third level</h3>
-        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a tabindex="0">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
+        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a class="external-link-after">non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
         <ol>
           <li>Donec blandit a lorem id convallis.</li>
           <li>Cras gravida arcu at diam gravida gravida.</li>
@@ -588,7 +553,8 @@
             </div>
             <h3 class="title">New York</h3>
             <h4 class="subtitle">Fri 27 Nov 2016</h4>
-            <a class="button" tabindex="0">Buy Tickets</a>
+            <!--TODO In my point of view "Buy Tickets" link go to external url. But in case if I can  Buy Tickets on this site, it's link can be button-->
+            <a class="button external-link">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -598,7 +564,8 @@
             </div>
             <h3 class="title">Los Angeles</h3>
             <h4 class="subtitle">Fri 27 Nov 2016</h4>
-            <a class="button" tabindex="0">Buy Tickets</a>
+            <!--TODO In my point of view "Buy Tickets" link go to external url. But in case if I can  Buy Tickets on this site, it's link can be button-->
+            <a class="button external-link">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -608,7 +575,8 @@
             </div>
             <h3 class="title">Mexico</h3>
             <h4 class="subtitle">Fri 27 Nov 2016</h4>
-            <a class="button" tabindex="0">Buy Tickets</a>
+            <!--TODO In my point of view "Buy Tickets" link go to external url. But in case if I can  Buy Tickets on this site, it's link can be button-->
+            <a class="button external-link">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -621,7 +589,8 @@
             </div>
             <h3 class="title">Paris</h3>
             <h4 class="subtitle">Fri 27 Nov 2016</h4>
-            <a class="button" tabindex="0">Buy Tickets</a>
+            <!--TODO In my point of view "Buy Tickets" link go to external url. But in case if I can  Buy Tickets on this site, it's link can be button-->
+            <a class="button external-link">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -631,7 +600,8 @@
             </div>
             <h3 class="title">Tokio</h3>
             <h4 class="subtitle">Fri 27 Nov 2016</h4>
-            <a class="button" tabindex="0">Buy Tickets</a>
+            <!--TODO In my point of view "Buy Tickets" link go to external url. But in case if I can  Buy Tickets on this site, it's link can be button-->
+            <a class="button external-link">Buy Tickets</a>
           </div>
         </div>
         <div class="tile is-parent">
@@ -641,7 +611,8 @@
             </div>
             <h3 class="title">London</h3>
             <h4 class="subtitle">Fri 27 Nov 2016</h4>
-            <a class="button" tabindex="0">Buy Tickets</a>
+            <!--TODO In my point of view "Buy Tickets" link go to external url. But in case if I can  Buy Tickets on this site, it's link can be button-->
+            <a class="button external-link">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -711,7 +682,7 @@
                 <p class="card-header-title">
                   <h6>Admin <small>(Light)</small></h6>
                   <span class="is-pulled-right">
-                    <a tabindex="0">
+                    <a>
                       <span class="tag is-default">v.0.7.2 &#8658 </span>
                     </a>
                     <span class="tag is-default">Desktop</span>
@@ -725,8 +696,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item" tabindex="0">Preview &#8658  </a>
-                <a class="card-footer-item" tabindex="0">Source Code &#8658 </a>
+                <a class="card-footer-item">Preview &#8658  </a>
+                <a class="card-footer-item">Source Code &#8658 </a>
               </div>
             </div>
           </div>
@@ -736,7 +707,7 @@
                 <p class="card-header-title">
                   <h6>Cards</h6>
                   <span class="is-pulled-right">
-                    <a tabindex="0">
+                    <a>
                       <span class="tag is-default">v.0.7.2 &#8658 </span>
                     </a>
                     <span class="tag is-default">Desktop</span>
@@ -750,8 +721,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item" tabindex="0">Preview &#8658 </a>
-                <a class="card-footer-item" tabindex="0">Source Code &#8658 </a>
+                <a class="card-footer-item">Preview &#8658 </a>
+                <a class="card-footer-item">Source Code &#8658 </a>
                 </div>
             </div>
           </div>
@@ -761,7 +732,7 @@
                 <p class="card-header-title">
                   <h6>Forum</h6>
                   <span class="is-pulled-right">
-                    <a tabindex="0">
+                    <a>
                       <span class="tag is-default">v.0.7.2 &#8658 </span>
                     </a>
                     <span class="tag is-default">Desktop</span>
@@ -775,8 +746,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item" tabindex="0">Preview &#8658 </a>
-                <a class="card-footer-item" tabindex="0">Source Code &#8658 </a>
+                <a class="card-footer-item">Preview &#8658 </a>
+                <a class="card-footer-item">Source Code &#8658 </a>
               </div>
             </div>
           </div>
@@ -788,7 +759,7 @@
                 <p class="card-header-title">
                   <h6>InstaAlbum</h6>
                   <span class="is-pulled-right">
-                    <a tabindex="0">
+                    <a>
                       <span class="tag is-default">v.0.7.2 &#8658 </span>
                     </a>
                     <span class="tag is-default">Desktop</span>
@@ -802,8 +773,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item" tabindex="0">Preview &#8658 </a>
-                <a class="card-footer-item" tabindex="0">Source Code &#8658 </a>
+                <a class="card-footer-item">Preview &#8658 </a>
+                <a class="card-footer-item">Source Code &#8658 </a>
               </div>
             </div>
           </div>
@@ -813,7 +784,7 @@
                 <p class="card-header-title">
                   <h6>Landing</h6>
                   <span class="is-pulled-right">
-                    <a tabindex="0">
+                    <a>
                       <span class="tag is-default">v.0.7.2 &#8658 </span>
                     </a>
                     <span class="tag is-default">Desktop</span>
@@ -827,8 +798,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item" tabindex="0">Preview &#8658 </a>
-                <a class="card-footer-item" tabindex="0">Source Code &#8658 </a>
+                <a class="card-footer-item">Preview &#8658 </a>
+                <a class="card-footer-item">Source Code &#8658 </a>
               </div>
             </div>
           </div>
@@ -838,7 +809,7 @@
                 <p class="card-header-title">
                   <h6>Marketing</h6>
                   <span class="is-pulled-right">
-                    <a tabindex="0">
+                    <a>
                       <span class="tag is-default">v.0.7.2 &#8658 </span>
                     </a>
                     <span class="tag is-default">Desktop</span>
@@ -852,8 +823,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <a class="card-footer-item" tabindex="0">Preview &#8658 </a>
-                <a class="card-footer-item" tabindex="0">Source Code &#8658 </a>
+                <a class="card-footer-item">Preview &#8658 </a>
+                <a class="card-footer-item">Source Code &#8658 </a>
               </div>
             </div>
           </div>
@@ -898,13 +869,13 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a tabindex="0">@jsmith</a> replied 34 minutes ago &nbsp;
+                      <a>@jsmith</a> replied 34 minutes ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+                  <span class="has-text-grey-light"><span class="fa fa-comments"></span> 1</span>
                 </div>
               </div>
             </div>
@@ -920,13 +891,13 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a tabindex="0">@red</a> replied 40 minutes ago &nbsp;
+                      <a>@red</a> replied 40 minutes ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 0</span>
+                  <span class="has-text-grey-light"><span class="fa fa-comments"></span> 0</span>
                 </div>
               </div>
             </div>
@@ -942,13 +913,13 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a tabindex="0">@jsmith</a> replied 53 minutes ago &nbsp;
+                      <a>@jsmith</a> replied 53 minutes ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 13</span>
+                  <span class="has-text-grey-light"><span class="fa fa-comments"></span> 13</span>
                 </div>
               </div>
             </div>
@@ -964,13 +935,13 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a tabindex="0">@brown</a> replied 3 hours ago &nbsp;
+                      <a>@brown</a> replied 3 hours ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                  <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
                 </div>
               </div>
             </div>
@@ -986,13 +957,13 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a tabindex="0">@hamburgler</a> replied 5 hours ago &nbsp;
+                      <a>@hamburgler</a> replied 5 hours ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                  <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
                 </div>
               </div>
             </div>
@@ -1008,13 +979,13 @@
                 <div class="media-content">
                   <div class="content">
                     <p>
-                      <a tabindex="0">@rapper</a> replied 3 hours ago &nbsp;
+                      <a>@rapper</a> replied 3 hours ago &nbsp;
                       <span class="tag">Question</span>
                     </p>
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 2</span>
+                  <span class="has-text-grey-light"><span class="fa fa-comments"></span> 2</span>
                 </div>
               </div>
             </div>
@@ -1033,56 +1004,58 @@
 
       <form class="column is-half is-offset-one-quarter box">
         <div class="field">
-          <label class="label">Name</label>
+          <label class="label" for="ContactUsFirstName">Name</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" placeholder="Text input" id="ContactUsFirstName">
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Username</label>
+          <label class="label" for="ContactUsUsername">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
+            <input class="input is-success" type="text" id="ContactUsUsername">
             <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
+              <span class="fas fa-user"></span>
             </span>
             <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
+              <span class="fas fa-check"></span>
             </span>
           </div>
           <p class="help is-success">This username is available</p>
         </div>
 
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label" for="ContactUsEmail">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+            <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="ContactUsEmail">
             <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
+              <span class="fas fa-envelope"></span>
             </span>
             <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
+              <span class="fas fa-exclamation-triangle"></span>
             </span>
           </div>
           <p class="help is-danger">This email is invalid</p>
         </div>
 
         <div class="field">
-          <label class="label">Subject</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
+          <label class="label">
+            <p>Subject</p>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select dropdown</option>
+                  <option>With options</option>
+                </select>
+              </div>
             </div>
-          </div>
+          </label>
         </div>
 
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label" for="ContactUsMessage">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" placeholder="Textarea" id="ContactUsMessage"></textarea>
           </div>
         </div>
 
@@ -1090,12 +1063,13 @@
           <div class="control">
             <label class="checkbox">
               <input type="checkbox">
-              I agree to the <a tabindex="0">terms and conditions &#8658 </a>
+              I agree to the <a class="external-link-after">terms and conditions</a>
             </label>
           </div>
         </div>
 
-        <div class="field">
+        <fieldset class="field">
+          <legend class="visuallyhidden">I agree to the terms and conditions</legend>
           <div class="control">
             <label class="radio">
               <input type="radio" name="question">
@@ -1106,7 +1080,7 @@
               No
             </label>
           </div>
-        </div>
+        </fieldset>
 
         <div class="field is-grouped">
           <div class="control">
@@ -1127,14 +1101,14 @@
           <div class="notification media has-background-white">
             <div class="media-left">
               <span class="icon">
-                <i class="has-text-warning fas fa-columns fa-lg"></i>
+                <span class="has-text-warning fas fa-columns fa-lg"></span>
               </span>
             </div>
             <div class="media-content">
               <div class="content">
                 <h4 class="title is-size-4">Columns</h4>
                 <h5 class="is-size-5 subtitle">
-                  The power of <b>Flexbox</b> in a simple interface
+                  The power of <strong>Flexbox</strong> in a simple interface
                 </h5>
               </div>
             </div>
@@ -1144,14 +1118,14 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-info">
-                <i class="fab fa-lg fa-wpforms"></i>
+                <span class="fab fa-lg fa-wpforms"></span>
               </span>
             </div>
             <div class="media-content">
               <div class="content">
                 <h4 class="title is-size-4">Form</h4>
                 <h5 class="is-size-5 subtitle">
-                  The indispensable <b>form controls</b>, designed for maximum clarity
+                  The indispensable <strong>form controls</strong>, designed for maximum clarity
                 </h5>
               </div>
             </div>
@@ -1161,7 +1135,7 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-danger">
-                <i class="fas fa-lg fa-cubes"></i>
+                <span class="fas fa-lg fa-cubes"></span>
               </span>
             </div>
             <div class="media-content">
@@ -1178,14 +1152,14 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-grey">
-                <i class="fas fa-lg fa-cogs"></i>
+                <span class="fas fa-lg fa-cogs"></span>
               </span>
             </div>
             <div class="media-content">
               <div class="content">
                 <h4 class="title is-size-4">Modifiers</h4>
                 <h5 class="is-size-5 subtitle">
-                  An <b>easy-to-read</b> naming system designed for humans
+                  An <strong>easy-to-read</strong> naming system designed for humans
                 </h5>
               </div>
             </div>
@@ -1195,14 +1169,14 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-primary">
-                <i class="fas fa-lg fa-warehouse"></i>
+                <span class="fas fa-lg fa-warehouse"></span>
               </span>
             </div>
             <div class="media-content">
               <div class="content">
                 <h4 class="title is-size-4">Layout</h4>
                 <h5 class="is-size-5 subtitle">
-                  Design the <b>structure</b> of your webpage with these CSS classes
+                  Design the <strong>structure</strong> of your webpage with these CSS classes
                 </h5>
               </div>
             </div>
@@ -1212,14 +1186,14 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-danger">
-                <i class="fas fa-lg fa-cube"></i>
+                <span class="fas fa-lg fa-cube"></span>
               </span>
             </div>
             <div class="media-content">
               <div class="content">
                 <h4 class="title is-size-4">Elements</h4>
                 <h5 class="is-size-5 subtitle">
-                  Essential interface elements that only require a <b>single CSS class</b>
+                  Essential interface elements that only require a <strong>single CSS class</strong>
                 </h5>
               </div>
             </div>
@@ -1229,54 +1203,53 @@
     </div>
   </div>
 </main>
-
   <footer class="footer">
     <div class="container">
-      <div class="columns">
+      <div class="columns external-link-before-wrap">
         <div class="column is-3 is-offset-2">
-          <h3 class="is-3 title"><b>Lessons</b></h3>
+          <h3 class="is-3 title">Lessons</h3>
           <ul>
-            <li><a tabindex="0">Lorem ipsum dolor sit amet &#8658 </a></li>
-            <li><a tabindex="0">Vestibulum errato isse &#8658 </a></li>
-            <li><a tabindex="0">Lorem ipsum dolor sit amet &#8658 </a></li>
-            <li><a tabindex="0">Aisia caisia &#8658 </a></li>
-            <li><a tabindex="0">Murphy's law &#8658 </a></li>
-            <li><a tabindex="0">Flimsy Lavenrock &#8658 </a></li>
-            <li><a tabindex="0">Maven Mousie Lavender &#8658 </a></li>
+            <li><a>Lorem ipsum dolor sit amet</a></li>
+            <li><a>Vestibulum errato isse </a></li>
+            <li><a>Lorem ipsum dolor sit amet </a></li>
+            <li><a>Aisia caisia </a></li>
+            <li><a>Murphy's law </a></li>
+            <li><a>Flimsy Lavenrock </a></li>
+            <li><a>Maven Mousie La</a></li>
           </ul>
         </div>
         <div class="column is-3">
-          <h3 class="is-3 title"><b>News</b></h3>
+          <h3 class="is-3 title">News</h3>
           <ul>
-            <li><a tabindex="0">Labore et dolore magna aliqua &#8658 </a></li>
-            <li><a tabindex="0">Kanban airis sum eschelor &#8658 </a></li>
-            <li><a tabindex="0">Modular modern free &#8658 </a></li>
-            <li><a tabindex="0">The king of clubs &#8658 </a></li>
-            <li><a tabindex="0">The Discovery Dissipation &#8658 </a></li>
-            <li><a tabindex="0">Course Correction &#8658 </a></li>
-            <li><a tabindex="0">Better Angels &#8658 </a></li>
+            <li><a>Labore et dolore magna aliqua </a></li>
+            <li><a>Kanban airis sum eschelor </a></li>
+            <li><a>Modular modern free </a></li>
+            <li><a>The king of clubs </a></li>
+            <li><a>The Discovery Dissipation </a></li>
+            <li><a>Course Correction </a></li>
+            <li><a>Better Angels </a></li>
           </ul>
         </div>
         <div class="column is-4">
-          <h3 class="is-3 title"><b>Help</b></h3>
+          <h3 class="is-3 title">Help</h3>
           <ul>
-            <li><a tabindex="0">Objects in space &#8658 </a></li>
-            <li><a tabindex="0">Playing cards with coyote &#8658 </a></li>
-            <li><a tabindex="0">Goodbye Yellow Brick Road &#8658 </a></li>
-            <li><a tabindex="0">The Garden of Forking Paths &#8658 </a></li>
-            <li><a tabindex="0">Future Shock &#8658 </a></li>
+            <li><a>Objects in space </a></li>
+            <li><a>Playing cards with coyote </a></li>
+            <li><a>Goodbye Yellow Brick Road </a></li>
+            <li><a>The Garden of Forking Paths </a></li>
+            <li><a>Future Shock</a></li>
           </ul>
         </div>
       </div>
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a tabindex="0"><i class="fab fa-github-alt fa-2x"></i></a>
-          <a tabindex="0"><i class="fab fa-youtube fa-2x"></i></a>
-          <a tabindex="0"><i class="fab fa-facebook fa-2x"></i></a>
-          <a tabindex="0"><i class="fab fa-twitter fa-2x"></i></a>
+          <a><span class="fab fa-github-alt fa-2x"></span></a>
+          <a><span class="fab fa-youtube fa-2x"></span></a>
+          <a><span class="fab fa-facebook fa-2x"></span></a>
+          <a><span class="fab fa-twitter fa-2x"></span></a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT &#8658 </a>.</p>
+        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" class="external-link-after">MIT</a>.</p>
       </div>
     </div>
   </footer>
