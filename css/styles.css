@@ -202,7 +202,7 @@
 .external-link-after,
 .external-link-before-wrap a,
 .tab-pane .external-link{
-  border-bottom: 1px solid rgb(50, 115, 220);
+  border-bottom: 1px solid #3069c7;
 }
 
 .external-link-after:hover,
@@ -229,4 +229,35 @@
 
 .features a {
   text-decoration: underline;
+}
+
+.tag:not(body).is-success {
+    background: #0b642a;
+}
+
+.help.is-success {
+    color: #0b642a;
+}
+
+a {
+    color: #2451ac;
+}
+
+.tag:not(body).background-danger {
+    background: #a6122f;
+}
+
+.help.color-danger {
+ color: #a6122f;
+}
+
+.has-text-white {
+    color: #ffffff;
+}
+
+.hero.is-link.has-link-background,
+.tag:not(body).is-link.has-link-background,
+.has-link-background,
+.button.has-link-background {
+    background-color: #124ca9;
 }
