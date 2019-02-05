@@ -319,8 +319,12 @@ header {
   color: #124ca9;
 }
 
-.breadcrumb {
+.custombreadcrumb {
   margin: 10px;
+}
+
+.custombreadcrumb a {
+  color: #124ca9;
 }
 
 .transcripts > p,
