@@ -150,21 +150,46 @@
   border-radius: 2px;
 }
 
+body a:focus,
+body input:focus,
+body .input:focus,
+body button:focus,
+body select:focus,
+body textarea:focus,
+body .button:focus:not(:active),
+body .button.is-link:focus:not(:active),
+body .button.is-primary:focus:not(:active),
+body .input.is-success:focus,
+body .input.is-danger:focus,
+body .select select:focus,
+body .textarea:focus{
+  outline: 0;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1.5px #ff00b6 ,
+  0 0 3px 3px #fcffff	;
+}
+
+
 .button.is-white.is-outlined:focus,
 .navbar-item.has-text-white:focus,
 .table-profile a:focus,
 .content a:focus,
 .button:focus{
-  box-shadow: 0 0 2px 1.5px #C9FAFF,
-  0 0 3px 3px #00425D;
+  box-shadow: 0 0 2px 1.5px #ff00b6 ,
+  0 0 3px 3px #fcffff	;
 }
 
-.button.is-info:focus,
-.button.is-link:focus,
-.hero.is-info a:focus {
-  box-shadow: 0 0 2px 1.5px #FFBAFF,
-  0 0 3px 3px #590063;
+a.box:focus, a.box:hover {
+  box-shadow: 0 0 2px 1.5px #ff00b6 ,
+  0 0 3px 3px #fcffff;
 }
+
+body .button.has-link-background.is-link:focus:not(:active),
+body {
+  box-shadow: 0 0 2px 1.5px #fcffff ,
+  0 0 3px 3px #ff00b6;
+}
+
 
 .button.is-link:focus {
   margin: 0 3px;
@@ -260,4 +285,36 @@ a {
 .has-link-background,
 .button.has-link-background {
     background-color: #124ca9;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  background: none;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+
+.tabs .button {
+  background-color: #124ca9;
+  color: #fff;
+  margin: 5px -1px -1px 0;
+}
+
+
+.tabs .is-active .button,
+.tabs .button:hover{
+  background-color: #fff;
+  color: #124ca9;
 }
