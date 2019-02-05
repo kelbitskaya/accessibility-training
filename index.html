@@ -10,7 +10,42 @@
 </head>
 
 <body>
-<a href="#maincontent" class="visuallyhidden">Skip to the main content</a>
+  <a href="#maincontent" class="visuallyhidden">Skip to the main content</a>
+
+  <div title="Skip To Keyboard Navigation" class="visuallyhidden">
+    <a tabindex="0" role="button" aria-expanded="false"  href="#">
+      Skip To...
+    </a>
+    <ul role="menu" aria-label="Skip To">
+      <li role="separator">Skip To</li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#maincontent">Main Content</a>
+      </li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#sectionAboutUs">section About Us</a>
+      </li>
+      <li role="separator">Page Outline</li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#sectionTours">section Tours</a>
+      </li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#sectionServices">section Services</a>
+      </li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#sectionPortfolio">section Portfolio</a>
+      </li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#sectionForum">section Forum</a>
+      </li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#sectionContactUs">section Contact Us</a>
+      </li>
+      <li role="presentation">
+        <a tabindex="-1" role="menuitem" href="#footer">Footer</a>
+      </li>
+    </ul>
+  </div>
+
 <header class="hero-head" role="banner">
   <div class="navbar">
     <div class="container">
@@ -110,7 +145,7 @@
     </ol>
   </nav>
 
-  <section class="section" id="about" aria-labelledby="regionAbout">
+  <section class="section" id="sectionAboutUs" aria-labelledby="regionAbout">
     <h2 class="title is-2 has-text-centered" id="regionAbout">About Us</h2>
     <h5 class="subtitle is-5 has-text-centered">We of all trades, master of "some"</h5>
     <div class="container has-text-centered text">
@@ -653,7 +688,7 @@
     </div>
   </div>
 
-  <section class="section has-background-grey-lighter has-text-centered" aria-labelledby="regionTours">
+  <section class="section has-background-grey-lighter has-text-centered" id="sectionTours" aria-labelledby="regionTours">
     <h2 class="title is-2 has-text-centered" id="regionTours">Tours</h2>
     <h5 class="subtitle is-5 has-text-centered has-text-black-bis">Outcoming dates for the best options</h5>
 
@@ -749,7 +784,7 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="regionServices">
+  <section class="section" id="sectionServices" aria-labelledby="regionServices">
     <h2 class="title is-2 has-text-centered" id="regionServices">Services</h2>
     <h5 class="subtitle is-5 has-text-centered">What can I do for you?</h5>
 
@@ -796,7 +831,7 @@
     </div>
   </section>
 
-  <section class="section has-background-grey-lighter" aria-labelledby="regionPortfolio">
+  <section class="section has-background-grey-lighter" id="sectionPortfolio" aria-labelledby="regionPortfolio">
     <h2 class="title is-2 has-text-centered" id="regionPortfolio">Portfolio</h2>
     <h5 class="subtitle is-5 has-text-black-bis has-text-centered">Our latest works</h5>
 
@@ -1007,7 +1042,7 @@
     </section>
 
 
-  <section class="section container" aria-labelledby="regionForum">
+  <section class="section container" id="sectionForum" aria-labelledby="regionForum">
       <h2 class="title is-2 has-text-centered " id="regionForum">Forum</h2>
       <h5 class="subtitle is-5 has-text-centered ">Discuss any topic with no leaving this page</h5>
 
@@ -1164,7 +1199,7 @@
       </div>
   </section>
 
-  <section class="section has-background-light" aria-labelledby="regionContactUs">
+  <section class="section has-background-light" id="sectionContactUs" aria-labelledby="regionContactUs">
     <h2 class="title is-2 has-text-centered" id="regionContactUs">Contact us</h2>
     <h5 class="subtitle is-5 has-text-centered">Don't hesitate, ask anything</h5>
     <div class="container">
@@ -1425,7 +1460,7 @@
     <button class="modal-close is-large"></button>
   </div>
 </main>
-  <footer class="footer" role="contentinfo">
+  <footer class="footer" id="footer" role="contentinfo">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
