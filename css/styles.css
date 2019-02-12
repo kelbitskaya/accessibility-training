@@ -331,3 +331,11 @@ header {
 .transcripts > ul {
   margin-bottom: 15px ;
 }
+
+.services-block-description {
+  display: none;
+}
+
+.services-block:hover .services-block-description {
+  display: block;
+}
