@@ -339,3 +339,16 @@ header {
 .services-block:hover .services-block-description {
   display: block;
 }
+
+.message-popup {
+  position: fixed;
+  bottom: 10%;
+  right: 0;
+  z-index: 1;
+
+}
+
+.message-popup .box{
+  background: #3a5b7e;
+  color: #fff;
+}

@@ -40,3 +40,18 @@ function toggleTab(selectedNav, targetId) {
     }
   });
 }
+
+
+
+var message = document.querySelector('#title-message');
+var i = 1;
+var timerId = setInterval(function() {
+  message.textContent =
+    "You receive " + i +" message on forum";
+  i++;
+}, 4000);
+
+
+setTimeout(function() {
+  clearInterval(timerId);
+}, 10000);
