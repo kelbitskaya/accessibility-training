@@ -10,38 +10,39 @@
 </head>
 
 <body>
-  <a href="#maincontent" class="visuallyhidden">Skip to the main content</a>
+  <a href="#maincontent" class="visuallyhidden" role="button">Skip to the main content</a>
 
-  <div title="Skip To Keyboard Navigation" class="visuallyhidden">
-    <a tabindex="0" role="button" aria-expanded="false"  href="#">
+  <div title="Skip To Keyboard Navigation" class="visuallyhidden" aria-labelledby="mainSkipLink">
+    <h2 class="visuallyhidden"  id="mainSkipLink">Skip to the main content</h2>
+    <a role="button" aria-expanded="false"  href="#">
       Skip To...
     </a>
     <ul role="menu" aria-label="Skip To">
       <li role="separator">Skip To</li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#maincontent">Main Content</a>
+        <a role="menuitem" href="#maincontent">Main Content</a>
       </li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#sectionAboutUs">section About Us</a>
+        <a role="menuitem" href="#sectionAboutUs">section About Us</a>
       </li>
       <li role="separator">Page Outline</li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#sectionTours">section Tours</a>
+        <a role="menuitem" href="#sectionTours">section Tours</a>
       </li>
       <li role="presentation">
         <a tabindex="-1" role="menuitem" href="#sectionServices">section Services</a>
       </li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#sectionPortfolio">section Portfolio</a>
+        <a role="menuitem" href="#sectionPortfolio">section Portfolio</a>
       </li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#sectionForum">section Forum</a>
+        <a role="menuitem" href="#sectionForum">section Forum</a>
       </li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#sectionContactUs">section Contact Us</a>
+        <a role="menuitem" href="#sectionContactUs">section Contact Us</a>
       </li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#footer">Footer</a>
+        <a role="menuitem" href="#footer">Footer</a>
       </li>
     </ul>
   </div>
@@ -289,8 +290,8 @@
 
   <div class="hero has-background-grey-light">
     <div class="container features">
-      <section class="section-heading has-text-centered">
-        <h2 class="title is-2">Three key features</h2>
+      <section class="section-heading has-text-centered" aria-labelledby="regionFeatures">
+        <h2 class="title is-2" id="regionFeatures">Three key features</h2>
         <h5 class="subtitle is-5 has-text-black-bis">We don't hide what we do</h5>
       </section>
 
@@ -352,27 +353,27 @@
       </div>
     </div>
     <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul>
+      <ul role="tablist" aria-label="List of topics">
         <li data-target="pane-1" id="1">
-          <button class="button">
+          <button class="button" role="tab" id="pictures" aria-selected="true" aria-controls="pictures-tab">
             <span class="icon is-small"><span class="fa fa-image"></span></span>
             <span>Pictures</span>
           </button>
         </li>
         <li data-target="pane-2" id="2" class="is-active">
-          <button class="button">
+          <button class="button" role="tab" id="article" aria-selected="false" aria-controls="article-tab">
             <span class="icon is-small"><span class="fab fa-empire"></span></span>
             <span>Article</span>
           </button>
         </li>
         <li data-target="pane-3" id="3">
-          <button class="button">
+          <button class="button" role="tab" id="team" aria-selected="false" aria-controls="team-tab">
             <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
             <span>Team</span>
           </button>
         </li>
         <li data-target="pane-4" id="4">
-          <button class="button">
+          <button class="button" role="tab" id="video" aria-selected="false" aria-controls="video-tab">
             <span class="icon is-small"><span class="fa fa-film"></span></span>
             <span>Video</span>
           </button>
@@ -382,7 +383,7 @@
   </div>
 
   <div class="tab-content container">
-    <div class="tab-pane" id="pane-1" class="level">
+    <div class="tab-pane" id="pane-1" class="level" role="tabpanel" id="pictures-tab" aria-labelledby="pictures">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -440,7 +441,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3">
+    <div class="tab-pane" id="pane-3" role="tabpanel" id="article-tab" aria-labelledby="article">
       <div class="columns medias">
         <div class="column">
           <div class="media">
@@ -513,7 +514,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-4">
+    <div class="tab-pane" id="pane-4" role="tabpanel" id="team-tab" aria-labelledby="team">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <h3 class="title has-text-centered">Inspired video</h3>
@@ -590,8 +591,8 @@
       </div>
     </div>
 
-    <div class="tab-pane is-active" id="pane-2">
-      <article class="content" role="article">
+    <div class="tab-pane is-active" id="pane-2" role="tabpanel" id="video-tab" aria-labelledby="video">
+      <article class="content">
         <h1 class="is-1 title">Hello World</h1>
         <p>Lorem ipsum<sup><a href="">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <h2 class="is-2 title">Second level</h2>
@@ -836,17 +837,13 @@
     <h5 class="subtitle is-5 has-text-black-bis has-text-centered">Our latest works</h5>
 
     <div class="container">
-      <section class="section-heading has-text-centered">
-
-      </section>
-
       <div class="container portfolio-container">
         <div class="columns">
           <div class="column is-4">
             <div class="card">
               <div class="card-header">
                 <p class="card-header-title">
-                  <h6>Admin <small>(Light)</small></h6>
+                  <h6>Admin (Light)</h6>
                   <span class="is-pulled-right">
                     <a href="" target="_blank" title="opens in new window or tab">
                       <span class="tag is-default external-link">v.0.7.2</span>
@@ -1406,7 +1403,8 @@
     </div>
   </section>
 
-  <div id="modal-card" class="modal modal-fx-3dSlit">
+  <div id="modal-card" class="modal modal-fx-3dSlit" role="dialog" id="modal-card-1" aria-labelledby="modal-card-1-label" aria-modal="true">
+    <h3 id="modal-card-1-label" class="visuallyhidden">Jane Doe Article picture</h3>
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1444,7 +1442,8 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image1" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" class="modal modal-fx-3dSlit" role="dialog" id="modal-image1" aria-labelledby="modal-image1-label" aria-modal="true">
+    <h3 class="visuallyhidden" id="modal-image1-label">Beautiful winter picture</h3>
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1" alt="">
@@ -1452,7 +1451,8 @@
     <button class="modal-close is-large"></button>
   </div>
 
-  <div id="modal-image2" class="modal modal-fx-superScaled">
+  <div id="modal-image2" class="modal modal-fx-superScaled" role="dialog" id="modal-image2" aria-labelledby="modal-image2-label" aria-modal="true">
+    <h3 class="visuallyhidden" id="modal-image2-label">Beautiful summer picture</h3>
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
       <img src="https://source.unsplash.com/random/?sig=3" alt="">

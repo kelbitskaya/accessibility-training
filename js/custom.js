@@ -15,13 +15,17 @@ document.querySelectorAll("#nav li").forEach(function(navEl) {
 
 function toggleTab(selectedNav, targetId) {
   var navEls = document.querySelectorAll("#nav li");
+  var navButtons = document.querySelectorAll("#nav li button");
 
   navEls.forEach(function(navEl) {
     if (navEl.id == selectedNav) {
       navEl.classList.add("is-active");
+      navEl.children[0].setAttribute('aria-selected', true);
+
     } else {
       if (navEl.classList.contains("is-active")) {
         navEl.classList.remove("is-active");
+        navEl.children[0].setAttribute('aria-selected', false);
       }
     }
   });
