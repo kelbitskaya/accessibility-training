@@ -1206,14 +1206,14 @@
         <div class="field">
           <label class="label" for="ContactUsFirstName">Name</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input" id="ContactUsFirstName">
+            <input class="input" type="text" placeholder="Text input" id="ContactUsFirstName" aria-required="false" aria-invalid="false">
           </div>
         </div>
 
         <div class="field">
           <label class="label" for="ContactUsUsername">Username</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" id="ContactUsUsername">
+            <input class="input is-success" type="text" id="ContactUsUsername" aria-required="false" placeholder="Enter you user name">
             <span class="icon is-small is-left">
               <span class="fas fa-user"></span>
             </span>
@@ -1227,7 +1227,7 @@
         <div class="field">
           <label class="label" for="ContactUsEmail">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="ContactUsEmail">
+            <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="ContactUsEmail" name="Email" aria-invalid="true" aria-required="true">
             <span class="icon is-small is-left">
               <span class="fas fa-envelope"></span>
             </span>
@@ -1243,7 +1243,7 @@
             <p>Subject</p>
             <div class="control">
               <div class="select">
-                <select>
+                <select aria-required="false">
                   <option>Select dropdown</option>
                   <option>With options</option>
                 </select>
@@ -1255,7 +1255,7 @@
         <div class="field">
           <label class="label" for="ContactUsMessage">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea" id="ContactUsMessage"></textarea>
+            <textarea class="textarea" placeholder="Textarea" id="ContactUsMessage" aria-required="false" aria-multiline="true"></textarea>
           </div>
         </div>
 
@@ -1272,11 +1272,11 @@
           <legend class="visuallyhidden">I agree to the terms and conditions</legend>
           <div class="control">
             <label class="radio">
-              <input type="radio" name="question">
+              <input type="radio" name="question" aria-required="false">
               Yes
             </label>
             <label class="radio">
-              <input type="radio" name="question">
+              <input type="radio" name="question" aria-required="false">
               No
             </label>
           </div>
