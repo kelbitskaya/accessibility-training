@@ -356,25 +356,25 @@
       <ul role="tablist" aria-label="List of topics">
         <li data-target="pane-1" id="1">
           <button class="button" role="tab" id="pictures" aria-selected="true" aria-controls="pictures-tab">
-            <span class="icon is-small"><span class="fa fa-image"></span></span>
+            <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span></span>
             <span>Pictures</span>
           </button>
         </li>
         <li data-target="pane-2" id="2" class="is-active">
           <button class="button" role="tab" id="article" aria-selected="false" aria-controls="article-tab">
-            <span class="icon is-small"><span class="fab fa-empire"></span></span>
+            <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span></span>
             <span>Article</span>
           </button>
         </li>
         <li data-target="pane-3" id="3">
           <button class="button" role="tab" id="team" aria-selected="false" aria-controls="team-tab">
-            <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
+            <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span></span>
             <span>Team</span>
           </button>
         </li>
         <li data-target="pane-4" id="4">
           <button class="button" role="tab" id="video" aria-selected="false" aria-controls="video-tab">
-            <span class="icon is-small"><span class="fa fa-film"></span></span>
+            <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span></span>
             <span>Video</span>
           </button>
         </li>
@@ -594,7 +594,7 @@
     <div class="tab-pane is-active" id="pane-2" role="tabpanel" id="video-tab" aria-labelledby="video">
       <article class="content">
         <h1 class="is-1 title">Hello World</h1>
-        <p>Lorem ipsum<sup><a href="">[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
+        <p>Lorem ipsum<sup><a href="#111" aria-hidden="true" id="footnote">[1]</a></sup><span class="visuallyhidden" aria-labelledby="footnote">Footnote</span> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <h2 class="is-2 title">Second level</h2>
         <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
         <ul>
@@ -1077,7 +1077,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-dark"><span class="fa fa-comments"></span> 1</span>
+                  <span class="has-text-grey-dark"><span class="fa fa-comments" aria-hidden="true"></span> 1</span>
                 </div>
               </div>
             </div>
@@ -1099,7 +1099,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-dark"><span class="fa fa-comments"></span> 0</span>
+                  <span class="has-text-grey-dark"><span class="fa fa-comments" aria-hidden="true"></span> 0</span>
                 </div>
               </div>
             </div>
@@ -1121,7 +1121,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-dark"><span class="fa fa-comments"></span> 13</span>
+                  <span class="has-text-grey-dark"><span class="fa fa-comments" aria-hidden="true"></span> 13</span>
                 </div>
               </div>
             </div>
@@ -1143,7 +1143,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-dark"><span class="fa fa-comments"></span> 2</span>
+                  <span class="has-text-grey-dark"><span class="fa fa-comments" aria-hidden="true"></span> 2</span>
                 </div>
               </div>
             </div>
@@ -1165,7 +1165,8 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-dark"><span class="fa fa-comments"></span> 2</span>
+                  <span class="has-text-grey-dark">
+                    <span class="fa fa-comments" aria-hidden="true"></span> 2</span>
                 </div>
               </div>
             </div>
@@ -1187,7 +1188,7 @@
                   </div>
                 </div>
                 <div class="media-right">
-                  <span class="has-text-grey-dark"><span class="fa fa-comments"></span> 2</span>
+                  <span class="has-text-grey-dark"><span class="fa fa-comments" aria-hidden="true"></span> 2</span>
                 </div>
               </div>
             </div>
@@ -1301,7 +1302,7 @@
           <div class="notification media has-background-white">
             <div class="media-left">
               <span class="icon">
-                <span class="has-text-warning fas fa-columns fa-lg"></span>
+                <span class="has-text-warning fas fa-columns fa-lg" aria-hidden="true"></span>
               </span>
             </div>
             <div class="media-content">
@@ -1318,7 +1319,7 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-info">
-                <span class="fab fa-lg fa-wpforms"></span>
+                <span class="fab fa-lg fa-wpforms" aria-hidden="true"></span>
               </span>
             </div>
             <div class="media-content">
@@ -1335,7 +1336,7 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-danger">
-                <span class="fas fa-lg fa-cubes"></span>
+                <span class="fas fa-lg fa-cubes" aria-hidden="true"></span>
               </span>
             </div>
             <div class="media-content">
@@ -1352,7 +1353,7 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-grey">
-                <span class="fas fa-lg fa-cogs"></span>
+                <span class="fas fa-lg fa-cogs" aria-hidden="true"></span>
               </span>
             </div>
             <div class="media-content">
@@ -1369,7 +1370,7 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-primary">
-                <span class="fas fa-lg fa-warehouse"></span>
+                <span class="fas fa-lg fa-warehouse" aria-hidden="true"></span>
               </span>
             </div>
             <div class="media-content">
@@ -1386,7 +1387,7 @@
           <div class="notification has-background-white media">
             <div class="media-left">
               <span class="icon has-text-danger">
-                <span class="fas fa-lg fa-cube"></span>
+                <span class="fas fa-lg fa-cube" aria-hidden="true"></span>
               </span>
             </div>
             <div class="media-content">
