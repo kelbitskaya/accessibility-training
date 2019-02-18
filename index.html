@@ -10,27 +10,25 @@
 </head>
 
 <body>
-  <a href="#maincontent" class="visuallyhidden" role="button">Skip to the main content</a>
-
-  <div title="Skip To Keyboard Navigation" class="visuallyhidden" aria-labelledby="mainSkipLink">
+  <div role="navigation" title="Skip To Keyboard Navigation" class="visuallyhidden" aria-label="mainSkipLink">
     <h2 class="visuallyhidden"  id="mainSkipLink">Skip to the main content</h2>
     <a role="button" aria-expanded="false"  href="#">
       Skip To...
     </a>
     <ul role="menu" aria-label="Skip To">
-      <li role="separator">Skip To</li>
+      <li>Skip To</li>
       <li role="presentation">
         <a role="menuitem" href="#maincontent">Main Content</a>
       </li>
       <li role="presentation">
         <a role="menuitem" href="#sectionAboutUs">section About Us</a>
       </li>
-      <li role="separator">Page Outline</li>
+      <li>Page Outline</li>
       <li role="presentation">
         <a role="menuitem" href="#sectionTours">section Tours</a>
       </li>
       <li role="presentation">
-        <a tabindex="-1" role="menuitem" href="#sectionServices">section Services</a>
+        <a role="menuitem" href="#sectionServices">section Services</a>
       </li>
       <li role="presentation">
         <a role="menuitem" href="#sectionPortfolio">section Portfolio</a>
@@ -47,7 +45,7 @@
     </ul>
   </div>
 
-<header class="hero-head" role="banner">
+<header class="hero-head">
   <div class="navbar">
     <div class="container">
       <div class="navbar-brand">
@@ -62,8 +60,7 @@
       </div>
 
 
-      <nav id="navbarMenu" class="navbar-menu" aria-labelledby="mainNavigation">
-        <h2 class="visuallyhidden" id="mainNavigation">Main Menu</h2>
+      <nav id="navbarMenu" class="navbar-menu" aria-label="Main Menu">
         <ul class="navbar-end">
           <li class="navbar-item">
             <a href="" class="button is-white is-outlined" aria-haspopup="true">
@@ -95,7 +92,7 @@
   </div>
 </header>
 
-<main role="main" id="maincontent">
+<main id="maincontent">
   <div class="hero hero-bg is-fullheight" role="img" aria-label="background image">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -105,7 +102,7 @@
             $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
           </h2>
           <div class="box">
-            <form class="field is-grouped" role="form">
+            <form class="field is-grouped">
               <p class="control is-expanded">
                 <label for="notifyViaEmail" class="visuallyhidden">Email: </label>
                 <input class="input" name="notifyViaEmail" id="notifyViaEmail">
@@ -146,7 +143,7 @@
     </ol>
   </nav>
 
-  <section class="section" id="sectionAboutUs" aria-labelledby="regionAbout">
+  <section class="section" id="sectionAboutUs" aria-label="About us">
     <h2 class="title is-2 has-text-centered" id="regionAbout">About Us</h2>
     <h5 class="subtitle is-5 has-text-centered">We of all trades, master of "some"</h5>
     <div class="container has-text-centered text">
@@ -223,33 +220,33 @@
                 </div>
               </li>
 
-              <div class="media">
+              <li class="media">
                 <div class="media-content">
                   <strong>Vue.js:</strong>
                   <progress class="progress is-primary" value="90" max="100"></progress>
                 </div>
-              </div>
+              </li>
 
-              <div class="media">
+              <li class="media">
                 <div class="media-content">
                   <strong>Node.js:</strong>
                   <progress class="progress is-primary" value="75" max="100"></progress>
                 </div>
-              </div>
+              </li>
 
-              <div class="media">
+              <li class="media">
                 <div class="media-content">
                   <strong>HTML5/CSS3</strong>
                   <progress class="progress is-primary" value="95" max="100"></progress>
                 </div>
-              </div>
+              </li>
 
-              <div class="media">
+              <li class="media">
                 <div class="media-content">
                   <strong>Databases</strong>
                   <progress class="progress is-primary" value="66" max="100"></progress>
                 </div>
-              </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -290,7 +287,7 @@
 
   <div class="hero has-background-grey-light">
     <div class="container features">
-      <section class="section-heading has-text-centered" aria-labelledby="regionFeatures">
+      <section class="section-heading has-text-centered" aria-label="Three key features">
         <h2 class="title is-2" id="regionFeatures">Three key features</h2>
         <h5 class="subtitle is-5 has-text-black-bis">We don't hide what we do</h5>
       </section>
@@ -355,25 +352,25 @@
     <div class="tabs is-boxed is-centered main-menu" id="nav">
       <ul role="tablist" aria-label="List of topics">
         <li data-target="pane-1" id="1">
-          <button class="button" role="tab" id="pictures" aria-selected="true" aria-controls="pictures-tab">
+          <button class="button" role="tab" id="pictures" aria-selected="true" aria-controls="pane-1">
             <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span></span>
             <span>Pictures</span>
           </button>
         </li>
         <li data-target="pane-2" id="2" class="is-active">
-          <button class="button" role="tab" id="article" aria-selected="false" aria-controls="article-tab">
+          <button class="button" role="tab" id="article" aria-selected="false" aria-controls="pane-2">
             <span class="icon is-small"><span class="fab fa-empire" aria-hidden="true"></span></span>
             <span>Article</span>
           </button>
         </li>
         <li data-target="pane-3" id="3">
-          <button class="button" role="tab" id="team" aria-selected="false" aria-controls="team-tab">
+          <button class="button" role="tab" id="team" aria-selected="false" aria-controls="pane-3">
             <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span></span>
             <span>Team</span>
           </button>
         </li>
         <li data-target="pane-4" id="4">
-          <button class="button" role="tab" id="video" aria-selected="false" aria-controls="video-tab">
+          <button class="button" role="tab" id="video" aria-selected="false" aria-controls="pane-4">
             <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span></span>
             <span>Video</span>
           </button>
@@ -383,7 +380,7 @@
   </div>
 
   <div class="tab-content container">
-    <div class="tab-pane" id="pane-1" class="level" role="tabpanel" id="pictures-tab" aria-labelledby="pictures">
+    <div class="tab-pane" id="pane-1" class="level" role="tabpanel" aria-labelledby="pictures">
       <div class="container">
         <div class="columns features">
           <div class="column is-4">
@@ -441,7 +438,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-3" role="tabpanel" id="article-tab" aria-labelledby="article">
+    <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="article">
       <div class="columns medias">
         <div class="column">
           <div class="media">
@@ -514,7 +511,7 @@
       </div>
     </div>
 
-    <div class="tab-pane" id="pane-4" role="tabpanel" id="team-tab" aria-labelledby="team">
+    <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="team">
       <div class="columns is-centered">
         <div class="column is-three-quarters">
           <h3 class="title has-text-centered">Inspired video</h3>
@@ -591,8 +588,8 @@
       </div>
     </div>
 
-    <div class="tab-pane is-active" id="pane-2" role="tabpanel" id="video-tab" aria-labelledby="video">
-      <article class="content">
+    <div class="tab-pane is-active" id="pane-2" role="tabpanel" aria-labelledby="video">
+      <article class="content" aria-label="Hello Worrd article">
         <h1 class="is-1 title">Hello World</h1>
         <p>Lorem ipsum<sup><a href="#111" aria-hidden="true" id="footnote">[1]</a></sup><span class="visuallyhidden" aria-labelledby="footnote">Footnote</span> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
         <h2 class="is-2 title">Second level</h2>
@@ -689,7 +686,7 @@
     </div>
   </div>
 
-  <section class="section has-background-grey-lighter has-text-centered" id="sectionTours" aria-labelledby="regionTours">
+  <section class="section has-background-grey-lighter has-text-centered" id="sectionTours" aria-label="Tours">
     <h2 class="title is-2 has-text-centered" id="regionTours">Tours</h2>
     <h5 class="subtitle is-5 has-text-centered has-text-black-bis">Outcoming dates for the best options</h5>
 
@@ -785,7 +782,7 @@
     </div>
   </section>
 
-  <section class="section" id="sectionServices" aria-labelledby="regionServices">
+  <section class="section" id="sectionServices" aria-label="Services">
     <h2 class="title is-2 has-text-centered" id="regionServices">Services</h2>
     <h5 class="subtitle is-5 has-text-centered">What can I do for you?</h5>
 
@@ -840,7 +837,7 @@
     </div>
   </section>
 
-  <section class="section has-background-grey-lighter" id="sectionPortfolio" aria-labelledby="regionPortfolio">
+  <section class="section has-background-grey-lighter" id="sectionPortfolio" aria-label="Portfolio">
     <h2 class="title is-2 has-text-centered" id="regionPortfolio">Portfolio</h2>
     <h5 class="subtitle is-5 has-text-black-bis has-text-centered">Our latest works</h5>
 
@@ -1047,7 +1044,7 @@
     </section>
 
 
-  <section class="section container" id="sectionForum" aria-labelledby="regionForum">
+  <section class="section container" id="sectionForum" aria-label="Forum">
       <h2 class="title is-2 has-text-centered " id="regionForum">Forum</h2>
       <h5 class="subtitle is-5 has-text-centered ">Discuss any topic with no leaving this page</h5>
 
@@ -1205,7 +1202,7 @@
       </div>
   </section>
 
-  <section class="section has-background-light" id="sectionContactUs" aria-labelledby="regionContactUs">
+  <section class="section has-background-light" id="sectionContactUs" aria-label="Contact Us">
     <h2 class="title is-2 has-text-centered" id="regionContactUs">Contact us</h2>
     <h5 class="subtitle is-5 has-text-centered">Don't hesitate, ask anything</h5>
     <div class="container">
@@ -1302,7 +1299,7 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="regionPartsOfSite">
+  <section class="section" aria-label="Parts Of Site">
     <h2 id="regionPartsOfSite" class="visuallyhidden">Parts Of Site</h2>
     <div class="container">
       <div class="columns is-multiline">
@@ -1470,7 +1467,7 @@
   </div>
 
 
-  <div class="column message-popup" role="region" id="new-message" aria-live="polite" aria-atomic="true" aria-labelledby="title-message">
+  <div class="column message-popup"  id="new-message" aria-live="polite" aria-atomic="true" aria-labelledby="title-message">
     <div class="box">
       <p id="title-message">
         You receive one more message on forum
@@ -1478,7 +1475,7 @@
     </div>
   </div>
 </main>
-  <footer class="footer" id="footer" role="contentinfo">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">

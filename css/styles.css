@@ -352,3 +352,9 @@ header {
   background: #3a5b7e;
   color: #fff;
 }
+
+.post a,
+.control .checkbox a,
+.content a {
+  text-decoration: underline;
+}
