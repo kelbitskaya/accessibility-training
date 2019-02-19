@@ -358,3 +358,13 @@ header {
 .content a {
   text-decoration: underline;
 }
+
+.tabs {
+    justify-content: center;
+}
+
+.tabs button.is-active {
+    color: #124ca9;
+    background: #fff;
+    border: 1px solid #fff;
+}
