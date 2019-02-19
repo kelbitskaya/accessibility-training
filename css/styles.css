@@ -368,3 +368,43 @@ header {
     background: #fff;
     border: 1px solid #fff;
 }
+
+.container .navbar-burger {
+  color: #fff;
+}
+
+@media screen and (max-width: 1087px) {
+  .navbar-item .button{
+    display: flex;
+    justify-content: start;
+  }
+
+  .navbar-item .button:after{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
+    content: "+";
+    font-size: 1.5rem;
+    position: absolute;
+    right: 18px;
+  }
+
+  .subnav {
+    margin: 10px;
+  }
+
+  .subnav a {
+    color: #fff;
+  }
+  .is-open .subnav {
+    display: block;
+  }
+
+  .navbar-item.is-open .button:after {
+    content: "-";
+  }
+}
+
+.subnav {
+  display: none;
+}

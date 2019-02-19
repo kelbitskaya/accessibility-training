@@ -7,6 +7,52 @@
   });
 })();
 
+
+var menuItems = document.querySelectorAll('.navbar-item');
+var keys = {
+  end: 35,
+  home: 36,
+  left: 37,
+  right: 39,
+  enter: 13
+};
+var direction = {
+  37: -1,
+  39: 1
+};
+
+menuItems.forEach(function (item) {
+  item.addEventListener('click', toggleMenu);
+  item.addEventListener('keyup', keydownMenuEvent);
+
+});
+
+function deactivateMenu() {
+  menuItems.forEach(function (item) {
+    item.classList.remove('is-open');
+    item.setAttribute('aria-expanded', false);
+  })
+}
+
+function toggleMenu(event) {
+  var item = event.currentTarget;
+  if(item.classList.contains('is-open')){
+    deactivateMenu();
+  } else {
+    deactivateMenu();
+    item.classList.add('is-open');
+  }
+
+  item.setAttribute('aria-expanded', true);
+}
+
+function keydownMenuEvent (event) {
+  var key = event.keyCode;
+  if(key === keys.enter) {
+    toggleMenu(event);
+  }
+}
+
 var message = document.querySelector('#title-message');
 var i = 1;
 var timerId = setInterval(function() {
@@ -20,19 +66,10 @@ setTimeout(function() {
   clearInterval(timerId);
 }, 10000);
 
+/* ------- Tabs ------- */
+
 var tabs = document.querySelectorAll('.tab-button');
 var panels = document.querySelectorAll('.tab-pane');
-var keys = {
-  end: 35,
-  home: 36,
-  left: 37,
-  right: 39,
-  delete: 46
-};
-var direction = {
-  37: -1,
-  39: 1
-};
 
 tabs.forEach(function (tab, index) {
   tab.addEventListener('click', clickEventListener);
@@ -48,6 +85,7 @@ function clickEventListener (event) {
 }
 
 function keydownEventListener (event) {
+  event.preventDefault();
   var key = event.keyCode;
 
   switch (key) {
