@@ -49,7 +49,6 @@ function clickEventListener (event) {
 }
 
 function keydownEventListener (event) {
-  event.preventDefault();
   var key = event.keyCode;
 
   switch (key) {
@@ -161,7 +160,7 @@ window.addEventListener('resize', function(){
   if (window.innerWidth > 1087) {
     removeListeners();
   } else {
-    menuItems.forEach(function (item) {
+    menuItems.forEach(function () {
       addListeners();
     });
   }
