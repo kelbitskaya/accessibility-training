@@ -408,3 +408,8 @@ header {
 .subnav {
   display: none;
 }
+
+.navbar-burger {
+  background: none;
+  border: none;
+}
