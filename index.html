@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div role="navigation" title="Skip To Keyboard Navigation" class="visuallyhidden" aria-label="mainSkipLink">
+ <!--<div role="navigation" title="Skip To Keyboard Navigation" class="skip-links-container" aria-label="mainSkipLink">
     <h2 class="visuallyhidden"  id="mainSkipLink">Skip to the main content</h2>
     <a href="#maincontent" class="visuallyhidden">Skip to the main content</a>
     <a role="button" aria-expanded="false"  href="#">
@@ -19,7 +19,7 @@
     <ul role="menu" aria-label="Skip To">
       <li>Skip To</li>
       <li role="presentation">
-        <a role="menuitem" href="#maincontent">Main Content</a>
+        <a role="menuitem" href="#maincontent" class="skip-link">Main Content</a>
       </li>
       <li role="presentation">
         <a role="menuitem" href="#sectionAboutUs">section About Us</a>
@@ -38,13 +38,22 @@
         <a role="menuitem" href="#sectionForum">section Forum</a>
       </li>
       <li role="presentation">
-        <a role="menuitem" href="#sectionContactUs">section Contact Us</a>
+        <a role="menuitem" href="#sectionContactUs" class="skip-link">section Contact Us</a>
       </li>
       <li role="presentation">
         <a role="menuitem" href="#footer">Footer</a>
       </li>
     </ul>
-  </div>
+  </div>-->
+ <div class="skip-links-container">
+   <ul>
+     <li><a href="#sectionAboutUs" class=" skip-link">Skip to about section</a></li>
+     <li><a href="#sectionPortfolio" class=" content skip-link">Skip to portfolio section</a></li>
+     <li><a href="#sectionServices" class=" content skip-link">Skip to Services section</a></li>
+     <li><a href="#sectionContactUs" class="skip-link">Skip to contact us </a></li>
+   </ul>
+   <span id="skipLinkTarget" tabindex="-1"></span>
+ </div>
 
 <header class="hero-head">
   <div class="navbar">
@@ -1258,96 +1267,76 @@
   <section class="section has-background-light" id="sectionContactUs" aria-label="Contact Us">
     <h2 class="title is-2 has-text-centered" id="regionContactUs">Contact us</h2>
     <h5 class="subtitle is-5 has-text-centered">Don't hesitate, ask anything</h5>
+
+    <div aria-live="polite" id="statusMessage" class="status-message">
+      <p id="successMessage" class="success-message">New account was created!</p>
+      <div id="errorMessage" class="error-message">
+        <p>Error! The form could not be submitted due to invalid entries.</p>
+        <p>Please fix it and try again.</p>
+      </div>
+    </div>
+
     <div class="container">
 
-      <form class="column is-half is-offset-one-quarter box">
-        <div class="field">
-          <label class="label" for="ContactUsFirstName">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Text input" id="ContactUsFirstName" aria-required="false" aria-invalid="false">
+      <form id="contactUsForm" action="#" method="POST" class="column is-half is-offset-one-quarter box" aria-labelledby="contact-us">
+
+        <div class="field control">
+          <label class="label" for="username">Username<span aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="username" name="username" placeholder="Enter you user name" aria-required="true" aria-describedby="username-error" aria-invalid="false">
+          <p class="visuallyhidden help is-success">This username is available</p>
+          <p class="visuallyhidden help is-danger" id="userNameNotAvalible">This username is not available</p>
+          <p id="error-username" class="visuallyhidden help is-danger">Please enter you user name</p>
+        </div>
+
+        <div class="field control">
+          <label class="label" for="ContactUsFirstName">First Name<span aria-hidden="true">*</span></label>
+          <input class="input" id="ContactUsFirstName" type="text" name="firstname" placeholder="Enter you First Name" aria-required="true" aria-describedby="firstname-error" aria-invalid="false">
+          <p id="error-firstname" class="visuallyhidden help is-danger">Please fill you First Name</p>
+        </div>
+
+        <div class="field control">
+          <label class="label" for="ContactUsLastName">Last Name<span aria-hidden="true">*</span></label>
+          <input class="input" id="ContactUsLastName" type="text" name="lastname" placeholder="Enter you Last Name" aria-required="true" aria-describedby="lastname-error" aria-invalid="false">
+          <p id="error-lastname" class="visuallyhidden help is-danger">Please fill you Last Name</p>
+        </div>
+
+        <div class="field control">
+          <label for="yearBirth" class="label">Year of birth<span aria-hidden="true">*</span></label>
+          <input disabled id="yearBirth" class="input" type="text" name="yearBirth" placeholder="Enter your year of birth" aria-required="true" aria-describedby="yearbirth-error" aria-invalid="false" />
+          <p id="error-yearbirth" class="visuallyhidden help">Please enter your year of birth</p>
+        </div>
+
+        <div class="field control">
+          <label for="phone" class="label">Phone<span aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" class="input" name="phone" aria-required="true" placeholder="Enter phone number in format 80331234567" aria-describedby="phone-error" aria-invalid="false" />
+          <p id="error-phone" class="visuallyhidden help">Please enter phone number in format 80331234567</p>
+        </div>
+
+        <div class="field control">
+          <label for="address" class="label">Address<span aria-hidden="true">*</span></label>
+          <input id="address" class="input" type="text" name="address" placeholder="Enter your address" aria-required="true" aria-describedby="address-error" aria-invalid="false"  />
+          <p id="error-address" class="visuallyhidden help">Please enter your address</p>
+        </div>
+
+        <div class="field control">
+          <label for="zip" class="label">ZIP Code</label>
+          <input id="zip" class="input" type="text" name="zip" pattern="[0-9]{6}" placeholder="Enter zip code in format 220103" aria-describedby="zip-error" aria-invalid="false"/>
+          <span id="error-zip" class="visuallyhidden help">Please enter zip code in format 220103</span>
+        </div>
+
+        <div class="field control">
+          <label class="label" for="ContactUsEmail">Email<span aria-hidden="true">*</span></label>
+          <input class="input" type="email" placeholder="enter Email address" id="ContactUsEmail" name="Email" aria-invalid="false" aria-required="true" aria-describedby="email-error">
+          <p id="error-email" class="visuallyhidden help">Please enter valid email address</p>
+          <div aria-live="polite" id="emailValidation">
+            <p id="waiting" class="visuallyhidden">Please wait while email is validating</p>
+            <p id="success" class="visuallyhidden">This email is valid</p>
+            <p id="error" class="visuallyhidden">This email is invalid</p>
           </div>
         </div>
 
-        <div class="field">
-          <label class="label" for="ContactUsUsername">Username</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" id="ContactUsUsername" aria-required="false" placeholder="Enter you user name">
-            <span class="icon is-small is-left">
-              <span class="fas fa-user"></span>
-            </span>
-            <span class="icon is-small is-right">
-              <span class="fas fa-check"></span>
-            </span>
-          </div>
-          <p class="help is-success">This username is available</p>
-        </div>
+        <input type="submit" class="button is-link contact-us" value="Submit">
 
-        <div class="field">
-          <label class="label" for="ContactUsEmail">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="ContactUsEmail" name="Email" aria-invalid="true" aria-required="true">
-            <span class="icon is-small is-left">
-              <span class="fas fa-envelope"></span>
-            </span>
-            <span class="icon is-small is-right">
-              <span class="fas fa-exclamation-triangle"></span>
-            </span>
-          </div>
-          <p class="help is-danger color-danger">This email is invalid</p>
-        </div>
-
-        <div class="field">
-          <label class="label">
-            <p>Subject</p>
-            <div class="control">
-              <div class="select">
-                <select aria-required="false">
-                  <option>Select dropdown</option>
-                  <option>With options</option>
-                </select>
-              </div>
-            </div>
-          </label>
-        </div>
-
-        <div class="field">
-          <label class="label" for="ContactUsMessage">Message</label>
-          <div class="control">
-            <textarea class="textarea" placeholder="Textarea" id="ContactUsMessage" aria-required="false" aria-multiline="true"></textarea>
-          </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
-              I agree to the <a href="">terms and conditions</a>
-            </label>
-          </div>
-        </div>
-
-        <fieldset class="field">
-          <legend class="visuallyhidden">I agree to the terms and conditions</legend>
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question" aria-required="false">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="question" aria-required="false">
-              No
-            </label>
-          </div>
-        </fieldset>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link has-link-background">Submit</button>
-          </div>
-          <div class="control">
-            <button class="button is-text">Cancel</button>
-          </div>
-        </div>
       </form>
     </div>
   </section>

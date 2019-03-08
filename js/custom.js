@@ -186,3 +186,99 @@ function toggleMenu(event) {
   }
   deactivateMenu(item);
 }
+
+
+
+/* ------- Form Validation ------- */
+
+window.users =[{username:'Masha'}];
+
+const config = {
+  form: document.querySelectorAll('#contactUsForm')[0],
+  users: window.users,
+  isFormValid: true,
+  userNameNotAvalible: document.querySelectorAll('#userNameNotAvalible')[0],
+  errorMessage: ''
+};
+
+function getUsers() {
+  return config.users ? config.users : []
+}
+
+function validateForm(event) {
+  event.preventDefault();
+  const { username, firstName, lastName, address, phone, yearBirth } = this.elements;
+  let user = {};
+
+  /* --- Validate User Name --- */
+  if(isUserNameAvalible(username.value, getUsers()) && username.value){
+    user.username = username.value;
+    removeError(username)
+  } else {
+    config.errorMessage = 'This username is not available';
+    getError(username, config.errorMessage);
+    config.isFormValid = false;
+  }
+
+  /* --- Validate phone --- */
+  validateFieldwithPattern(phone, '/^\d{11}$/');
+
+  /* --- Validate address --- */
+  validateField(address);
+
+  config.isFormValid ? config.users.push(user): setFocus();
+}
+
+function validateField(elem) {
+  if(elem.value) {
+    user[elem] = elem.value;
+    removeError(elem);
+  } else {
+    getError(elem);
+    config.isFormValid = false;
+  }
+}
+
+function validateFieldwithPattern(elem, pattern) {
+  if(elem.value && elem.value.match(pattern)) {
+    user[elem] = elem.value;
+    removeError(elem);
+  } else {
+    getError(elem);
+    config.isFormValid = false;
+  }
+}
+
+
+function isUserNameAvalible(username, users) {
+  const usersNames = users.map(user => user.username);
+  return !usersNames.includes(username);
+}
+
+function getError(element, message) {
+  const invalidEl = element.parentNode.querySelector(`#error-${element.id}`);
+
+  if(message) {
+    invalidEl.innerHTML = message;
+  }
+
+  invalidEl.classList.remove('visuallyhidden');
+  element.setAttribute('aria-invalid', 'true');
+  element.classList.add('is-danger');
+  invalidEl.parentNode.classList.add('is-danger');
+}
+
+function removeError(element) {
+  const invalidEl  = element.parentNode.querySelector(`#error-${element.id}`);
+
+  invalidEl.classList.add('visuallyhidden');
+  element.setAttribute('aria-invalid', 'false');
+  element.classList.remove('is-danger');
+  invalidEl.parentNode.classList.remove('is-danger');
+}
+
+function setFocus() {
+
+}
+
+config.form.addEventListener('submit', validateForm);
