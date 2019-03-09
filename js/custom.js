@@ -197,6 +197,7 @@ window.users =[{username:'Masha', firstName:'Masha',lastName:'Masha'},
 
 const config = {
   form: document.querySelectorAll('#contactUsForm')[0],
+  emailField: document.querySelectorAll('#email')[0],
   statusMessage: document.querySelectorAll('#statusMessage')[0],
   successMessage: document.querySelectorAll('#successMessage')[0],
   errorMessage: document.querySelectorAll('#errorMessage')[0],
@@ -340,3 +341,28 @@ function setFocus() {
 }
 
 config.form.addEventListener('submit', validateForm);
+config.emailField.addEventListener('blur', function() {
+  const emailPattern = /^[^@]+@[^@.]+\.[^@]+$/;
+  const self = this;
+  const emailContainer = this.parentElement;
+  const emailStatus = emailContainer.querySelector('#emailValidation');
+
+  if(!config.isValidEmail) {
+    self.focus();
+    emailStatus.setAttribute('aria-describedby', 'is-waiting');
+
+    setTimeout(function(){
+      if(self.value && self.value.match(emailPattern)) {
+        emailStatus.setAttribute('aria-describedby', 'is-success-status');
+        removeError(self);
+        config.isValidEmail = true;
+      } else {
+        emailStatus.setAttribute('aria-describedby', 'is-error-status');
+        getError(self);
+      }
+      document.querySelector('input.is-danger').focus()
+    }, 5000);
+  }
+
+}, true);
+
