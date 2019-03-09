@@ -1269,8 +1269,8 @@
     <h5 class="subtitle is-5 has-text-centered">Don't hesitate, ask anything</h5>
 
     <div aria-live="polite" id="statusMessage" class="status-message">
-      <p id="successMessage" class="success-message">New account was created!</p>
-      <div id="errorMessage" class="error-message">
+      <p id="successMessage" class="visuallyhidden success-message">New user was added</p>
+      <div id="errorMessage" class="visuallyhidden error-message">
         <p>Error! The form could not be submitted due to invalid entries.</p>
         <p>Please fix it and try again.</p>
       </div>
@@ -1289,21 +1289,21 @@
         </div>
 
         <div class="field control">
-          <label class="label" for="ContactUsFirstName">First Name<span aria-hidden="true">*</span></label>
-          <input class="input" id="ContactUsFirstName" type="text" name="firstname" placeholder="Enter you First Name" aria-required="true" aria-describedby="firstname-error" aria-invalid="false">
-          <p id="error-firstname" class="visuallyhidden help is-danger">Please fill you First Name</p>
+          <label class="label" for="firstName">First Name<span aria-hidden="true">*</span></label>
+          <input class="input" id="firstName" type="text" name="firstname" placeholder="Enter you First Name" aria-required="true" aria-describedby="firstname-error" aria-invalid="false">
+          <p id="error-firstName" class="visuallyhidden help is-danger">Please fill you First Name</p>
         </div>
 
         <div class="field control">
-          <label class="label" for="ContactUsLastName">Last Name<span aria-hidden="true">*</span></label>
-          <input class="input" id="ContactUsLastName" type="text" name="lastname" placeholder="Enter you Last Name" aria-required="true" aria-describedby="lastname-error" aria-invalid="false">
-          <p id="error-lastname" class="visuallyhidden help is-danger">Please fill you Last Name</p>
+          <label class="label" for="lastName">Last Name<span aria-hidden="true">*</span></label>
+          <input class="input" id="lastName" type="text" name="lastname" placeholder="Enter you Last Name" aria-required="true" aria-describedby="lastname-error" aria-invalid="false">
+          <p id="error-lastName" class="visuallyhidden help is-danger">Please fill you Last Name</p>
         </div>
 
         <div class="field control">
           <label for="yearBirth" class="label">Year of birth<span aria-hidden="true">*</span></label>
           <input disabled id="yearBirth" class="input" type="text" name="yearBirth" placeholder="Enter your year of birth" aria-required="true" aria-describedby="yearbirth-error" aria-invalid="false" />
-          <p id="error-yearbirth" class="visuallyhidden help">Please enter your year of birth</p>
+          <p id="error-yearBirth" class="visuallyhidden help is-danger">Please enter your year of birth</p>
         </div>
 
         <div class="field control">

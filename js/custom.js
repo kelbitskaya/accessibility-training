@@ -191,14 +191,27 @@ function toggleMenu(event) {
 
 /* ------- Form Validation ------- */
 
-window.users =[{username:'Masha'}];
+window.users =[{username:'Masha', firstName:'Masha',lastName:'Masha'},
+  {username:'Dasha', firstName:'Dasha',lastName:'Dasha'},
+  {username:'Maks', firstName:'Maks',lastName:'Maks'}];
 
 const config = {
   form: document.querySelectorAll('#contactUsForm')[0],
+  statusMessage: document.querySelectorAll('#statusMessage')[0],
+  successMessage: document.querySelectorAll('#successMessage')[0],
+  errorMessage: document.querySelectorAll('#errorMessage')[0],
   users: window.users,
   isFormValid: true,
+  user: {},
   userNameNotAvalible: document.querySelectorAll('#userNameNotAvalible')[0],
-  errorMessage: ''
+  errorMessage: '',
+  isValidFirstName: false,
+  isValidLastName: false,
+  duplicateUserName: false,
+  isValidEmail:false,
+  phonePattern: /^((\+3|8)+([0-9]){10})$/,
+  yearBirthPattern: /^(([0-9]){4})$/,
+  emailPattern: /^[^@]+@[^@.]+\.[^@]+$/,
 };
 
 function getUsers() {
@@ -208,11 +221,10 @@ function getUsers() {
 function validateForm(event) {
   event.preventDefault();
   const { username, firstName, lastName, address, phone, yearBirth } = this.elements;
-  let user = {};
-
+  config.isFormValid = true;
   /* --- Validate User Name --- */
-  if(isUserNameAvalible(username.value, getUsers()) && username.value){
-    user.username = username.value;
+  if(isUserNameAvalible(username, getUsers()) && username.value){
+    config.user.username = username.value;
     removeError(username)
   } else {
     config.errorMessage = 'This username is not available';
@@ -220,18 +232,35 @@ function validateForm(event) {
     config.isFormValid = false;
   }
 
+  /* --- Validate First Name --- */
+  validateField(firstName, 'isValidFirstName');
+
+  /* --- Validate Last Name --- */
+  validateField(lastName, 'isValidLastName');
+
+  /* --- Check to Duplicated First Name and Last Name --- */
+  checkToDuplicatedFirstLastName(yearBirth);
+
+  /* --- Validate Year Birth --- */
+  if(!yearBirth.hasAttribute('disabled')) {
+    validateFieldwithPattern(yearBirth, config.yearBirthPattern);
+  }
+
   /* --- Validate phone --- */
-  validateFieldwithPattern(phone, '/^\d{11}$/');
+  validateFieldwithPattern(phone, config.phonePattern);
 
   /* --- Validate address --- */
   validateField(address);
 
-  config.isFormValid ? config.users.push(user): setFocus();
+  config.isFormValid ? saveUser(): setFocus();
 }
 
-function validateField(elem) {
-  if(elem.value) {
-    user[elem] = elem.value;
+function validateField(elem, validField) {
+  if(elem && elem.value) {
+    if(validField) {
+      config[validField] = true;
+    }
+    config.user[elem.id] = elem.value;
     removeError(elem);
   } else {
     getError(elem);
@@ -241,7 +270,7 @@ function validateField(elem) {
 
 function validateFieldwithPattern(elem, pattern) {
   if(elem.value && elem.value.match(pattern)) {
-    user[elem] = elem.value;
+    config.user[elem.id] = elem.value;
     removeError(elem);
   } else {
     getError(elem);
@@ -250,10 +279,24 @@ function validateFieldwithPattern(elem, pattern) {
 }
 
 
-function isUserNameAvalible(username, users) {
-  const usersNames = users.map(user => user.username);
-  return !usersNames.includes(username);
+function checkToDuplicatedFirstLastName(yearBirth) {
+  if(!isUserNameAvalible(firstName, getUsers()) && !isUserNameAvalible(lastName, getUsers())){
+    config.duplicateUserName = true;
+  }
+  if(config.isValidFirstName && config.isValidLastName && config.users.length && config.duplicateUserName) {
+    if(!yearBirth.value){
+      yearBirth.removeAttribute('disabled');
+      config.isFormValid = false;
+      yearBirth.focus();
+    }
+  }
 }
+
+function isUserNameAvalible(username, users) {
+  const usersNames = users.map(user => user[username.id]);
+  return !usersNames.includes(username.value);
+}
+
 
 function getError(element, message) {
   const invalidEl = element.parentNode.querySelector(`#error-${element.id}`);
@@ -265,6 +308,7 @@ function getError(element, message) {
   invalidEl.classList.remove('visuallyhidden');
   element.setAttribute('aria-invalid', 'true');
   element.classList.add('is-danger');
+  element.parentNode.classList.add('invalidField');
   invalidEl.parentNode.classList.add('is-danger');
 }
 
@@ -277,8 +321,22 @@ function removeError(element) {
   invalidEl.parentNode.classList.remove('is-danger');
 }
 
-function setFocus() {
+function saveUser() {
+  config.users.push(config.user);
+  config.form.reset();
+  config.isFormValid = false;
+  config.duplicateUserName = false;
+  config.isValidFirstName = false;
+  config.isValidLastName = false;
+  config.isValidEmail = false;
+  config.user = {};
 
+  alert('New user was added');
+}
+
+function setFocus() {
+  alert('Error! The form could not be submitted due to invalid entries.');
+  document.querySelector('input.is-danger').focus()
 }
 
 config.form.addEventListener('submit', validateForm);
