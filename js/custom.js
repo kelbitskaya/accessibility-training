@@ -335,6 +335,7 @@ function saveUser() {
   config.user = {};
 
   document.querySelector('#yearBirth').setAttribute('disabled', 'disabled');
+  document.querySelector('#addNewUser').focus();
 
   alert('New user was added');
 }
@@ -375,7 +376,6 @@ function validateEmail() {
         getError(email);
         config.isFormValid = false;
       }
-      document.querySelector('input.is-danger').focus()
     }, 1);
   }
 
