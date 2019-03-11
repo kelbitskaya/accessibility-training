@@ -253,6 +253,8 @@ function validateForm(event) {
   /* --- Validate address --- */
   validateField(address);
 
+  validateEmail();
+
   config.isFormValid ? saveUser(): setFocus();
 }
 
@@ -332,37 +334,50 @@ function saveUser() {
   config.isValidEmail = false;
   config.user = {};
 
+  document.querySelector('#yearBirth').setAttribute('disabled', 'disabled');
+
   alert('New user was added');
 }
 
 function setFocus() {
+  const invalidEl = document.querySelector('input.is-danger');
   alert('Error! The form could not be submitted due to invalid entries.');
-  document.querySelector('input.is-danger').focus()
+  if(!invalidEl.type === 'email'){
+    document.querySelector('input.is-danger').focus()
+  }
 }
 
 config.form.addEventListener('submit', validateForm);
-config.emailField.addEventListener('blur', function() {
-  const emailPattern = /^[^@]+@[^@.]+\.[^@]+$/;
-  const self = this;
-  const emailContainer = this.parentElement;
-  const emailStatus = emailContainer.querySelector('#emailValidation');
+document.querySelector('#addNewUser').addEventListener('click', function () {
+  document.querySelector('#username').focus();
+});
 
-  if(!config.isValidEmail) {
-    self.focus();
+document.querySelector('#email').addEventListener('blur', function () {
+  validateEmail();
+});
+
+
+function validateEmail() {
+  const emailStatus = document.querySelector('#emailValidation');
+  const email= document.querySelector('#email');
+
+  if(!config.isValidEmail && config.isFormValid) {
+    email.focus();
     emailStatus.setAttribute('aria-describedby', 'is-waiting');
 
     setTimeout(function(){
-      if(self.value && self.value.match(emailPattern)) {
+      if(email.value && email.value.match(config.emailPattern)) {
         emailStatus.setAttribute('aria-describedby', 'is-success-status');
-        removeError(self);
+        removeError(email);
         config.isValidEmail = true;
       } else {
         emailStatus.setAttribute('aria-describedby', 'is-error-status');
-        getError(self);
+        getError(email);
+        config.isFormValid = false;
       }
       document.querySelector('input.is-danger').focus()
-    }, 5000);
+    }, 1);
   }
 
-}, true);
+}
 
